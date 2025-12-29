@@ -17,6 +17,10 @@ O fluxo integra o WhatsApp com o Google Gemini para processar mensagens recebida
 
 ![Execução do Fluxo](2.execucao.gif)
 
+## 🧩 Visualização do Fluxo
+
+![Fluxo no n8n](1.fluxo-n8n.png)
+
 ## 🛠️ Como Funciona o Fluxo
 
 1. **WhatsApp Trigger**: Inicia quando uma mensagem é enviada para o número conectado.

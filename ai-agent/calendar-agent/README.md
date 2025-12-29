@@ -21,6 +21,10 @@ O fluxo transforma o Telegram em uma interface de comando para sua agenda. Você
 
 ![Demonstração do Agente](2.execucao.gif)
 
+## 🧩 Visualização do Fluxo
+
+![Fluxo no n8n](1.n8n-fluxo.png)
+
 ## 🛠️ Como Funciona o Fluxo
 
 1. **Telegram Trigger**: Captura as mensagens enviadas para o seu bot no Telegram.

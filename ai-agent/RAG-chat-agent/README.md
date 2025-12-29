@@ -25,6 +25,9 @@ O sistema monitora uma pasta específica no Google Drive. Assim que um novo arqu
 O projeto é dividido em duas partes principais:
 
 ### 1. Pipeline de Ingestão (Indexação)
+
+![Fluxo de Ingestão](1.storing-docs.png)
+
 1. **Google Drive Trigger**: Detecta novos arquivos ou atualizações na pasta monitorada.
 2. **Download File**: Baixa o conteúdo do arquivo.
 3. **Text Splitter**: Divide o texto em pedaços menores (chunks) para melhor processamento.
@@ -32,6 +35,9 @@ O projeto é dividido em duas partes principais:
 5. **Pinecone Store**: Salva os vetores no banco de dados para busca futura.
 
 ### 2. Pipeline de Chat (Consulta)
+
+![Fluxo de Chat](2.chat-with-docs.png)
+
 1. **Telegram Trigger**: Recebe a pergunta do usuário.
 2. **AI Agent**: Analisa a intenção e decide consultar a base de conhecimento.
 3. **Vector Store Tool**: Busca os trechos mais relevantes no Pinecone usando a mesma técnica de embeddings.
