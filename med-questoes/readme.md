@@ -31,7 +31,7 @@ Um processo separado consome as questões da planilha e as dispara para o canal 
 ![Fluxo de Envio no n8n](n8n-enviar-questoes.png)
 
 ### 4. Experiência do Usuário
-O estudante recebe a questão pronta para responder. Ao selecionar uma alternativa, o Telegram mostra se acertou e apresenta uma animação de confete (em caso de acerto).
+O estudante recebe a questão pronta para responder. A resposta correta fica oculta sob uma tarja (efeito spoiler) para não antecipar o resultado. Quando o aluno estiver pronto para conferir, basta clicar na parte hachurada para revelar o gabarito.
 
 ![Quiz no Telegram](resultado-telegram.png)
 
