@@ -1,0 +1,58 @@
+{
+    "nodes": [
+        {
+            "parameters": {},
+            "type": "n8n-nodes-base.errorTrigger",
+            "typeVersion": 1,
+            "position": [
+                0,
+                0
+            ],
+            "id": "53682d52-74d9-476d-936d-4d8ab477aa3b",
+            "name": "Error Trigger"
+        },
+        {
+            "parameters": {
+                "sendTo": "arthu91@gmail.com",
+                "subject": "=N8N - erro no workflow {{ $json.workflow.name }}",
+                "message": "=Ocorreu um erro na execução do workflow, no nó {{ $json.execution.lastNodeExecuted }}. \nMensagem de erro: \n{{ $json.execution.error.message }}\nURL de execução: {{ $json.execution.url }}",
+                "options": {
+                    "appendAttribution": true
+                }
+            },
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.2,
+            "position": [
+                208,
+                0
+            ],
+            "id": "c3c13d47-41b7-4ee8-a26e-5df998b9183c",
+            "name": "Send a message",
+            "webhookId": "4a6f3bdd-bd38-458c-ab69-2b0f8ac2df7d",
+            "credentials": {
+                "gmailOAuth2": {
+                    "id": "4a1WlziZCSt6eiNm",
+                    "name": "Gmail account"
+                }
+            }
+        }
+    ],
+    "connections": {
+        "Error Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Send a message",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "pinData": {},
+    "meta": {
+        "templateCredsSetupCompleted": true,
+        "instanceId": "20e36ba582c1bb63ad7d4021527fd1abdbb957c733555f6338df24be4aad62c1"
+    }
+}
